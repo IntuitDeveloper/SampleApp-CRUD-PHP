@@ -1,0 +1,77 @@
+REQUEST URI FOR SEQUENCE ID 00005
+==================================
+https://sandbox-quickbooks.api.intuit.com/v3/company/123145809324582/customer?operation=update&minorversion=5
+
+REQUEST HEADERS
+================
+host: sandbox-quickbooks.api.intuit.com
+user-agent: V3PHPSDK2.4.1
+accept: application/xml
+connection: close
+content-type: application/xml
+content-length: 2346
+
+REQUEST BODY
+=============
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:Customer xmlns:ns0="http://schema.intuit.com/finance/v3">
+  <ns0:Id>141</ns0:Id>
+  <ns0:SyncToken>0</ns0:SyncToken>
+  <ns0:MetaData>
+    <ns0:CreateTime>2016-08-24T15:11:08-07:00</ns0:CreateTime>
+    <ns0:LastUpdatedTime>2016-08-24T15:11:08-07:00</ns0:LastUpdatedTime>
+  </ns0:MetaData>
+  <ns0:Title>Title1213104419</ns0:Title>
+  <ns0:GivenName>GivenName1455324844</ns0:GivenName>
+  <ns0:MiddleName>Middle368236934</ns0:MiddleName>
+  <ns0:FamilyName>Family511296509</ns0:FamilyName>
+  <ns0:Suffix>Sr.</ns0:Suffix>
+  <ns0:FullyQualifiedName>DisplayName1196027329</ns0:FullyQualifiedName>
+  <ns0:CompanyName>CompanyName1180650019</ns0:CompanyName>
+  <ns0:DisplayName>DisplayName1196027329</ns0:DisplayName>
+  <ns0:PrintOnCheckName>CompanyName1180650019</ns0:PrintOnCheckName>
+  <ns0:Active>false</ns0:Active>
+  <ns0:PrimaryPhone>
+    <ns0:FreeFormNumber>(650)111-1111</ns0:FreeFormNumber>
+  </ns0:PrimaryPhone>
+  <ns0:AlternatePhone>
+    <ns0:FreeFormNumber>(650)111-2222</ns0:FreeFormNumber>
+  </ns0:AlternatePhone>
+  <ns0:Mobile>
+    <ns0:FreeFormNumber>(650)111-3333</ns0:FreeFormNumber>
+  </ns0:Mobile>
+  <ns0:Fax>
+    <ns0:FreeFormNumber>(650)111-1111</ns0:FreeFormNumber>
+  </ns0:Fax>
+  <ns0:PrimaryEmailAddr>
+    <ns0:Address>test@abc.com</ns0:Address>
+  </ns0:PrimaryEmailAddr>
+  <ns0:DefaultTaxCodeRef>2</ns0:DefaultTaxCodeRef>
+  <ns0:Taxable>true</ns0:Taxable>
+  <ns0:BillAddr>
+    <ns0:Id>253</ns0:Id>
+    <ns0:Line1>123 Main St</ns0:Line1>
+    <ns0:City>Mountain View</ns0:City>
+    <ns0:Country>United States</ns0:Country>
+    <ns0:CountrySubDivisionCode>CA</ns0:CountrySubDivisionCode>
+    <ns0:PostalCode>94043</ns0:PostalCode>
+  </ns0:BillAddr>
+  <ns0:ShipAddr>
+    <ns0:Id>254</ns0:Id>
+    <ns0:Line1>123 Main St</ns0:Line1>
+    <ns0:City>Mountain View</ns0:City>
+    <ns0:Country>United States</ns0:Country>
+    <ns0:CountrySubDivisionCode>CA</ns0:CountrySubDivisionCode>
+    <ns0:PostalCode>94043</ns0:PostalCode>
+  </ns0:ShipAddr>
+  <ns0:Notes>Testing Notes</ns0:Notes>
+  <ns0:Job>false</ns0:Job>
+  <ns0:BillWithParent>false</ns0:BillWithParent>
+  <ns0:Balance>0</ns0:Balance>
+  <ns0:BalanceWithJobs>0</ns0:BalanceWithJobs>
+  <ns0:CurrencyRef>USD</ns0:CurrencyRef>
+  <ns0:PreferredDeliveryMethod>Print</ns0:PreferredDeliveryMethod>
+  <ns0:ResaleNum>40</ns0:ResaleNum>
+</ns0:Customer>
+
+

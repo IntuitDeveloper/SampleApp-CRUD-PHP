@@ -1,0 +1,22 @@
+RESPONSE URI FOR SEQUENCE ID 00006
+==================================
+https://sandbox-quickbooks.api.intuit.com/v3/company/123145809324582/customer?operation=update&minorversion=5
+
+RESPONSE HEADERS
+================
+Server: nginx
+Content-Type: application/xml;charset=UTF-8
+Content-Length: 1893
+Connection: close
+Strict-Transport-Security: max-age=15552000
+intuit_tid: gw-cb2babee-e4bf-4a87-a606-e7f369307212
+Set-Cookie: JSESSIONID=820E39786E99D329160840F1B40BA8F6.c50-pprdsbxas800; Path=/; Secure; HttpOnly
+QBO-Version: 1608.1609
+X-NewRelic-App-Data: PxQEVFFbAQoTVVZaAAgOU1ETGhE1AwE2QgNWEVlbQFtcC2VOfw5BDwVaXhsDB21BWThOE1VeAlY4HkAAPkkADV0SWQxBZBsYb0paFEIVXA8BRBVNVk0IHwBKUFAACQBXSAMFB1RKQQAIUwxUCVwDAgcHXQcDB1dAOQ==
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate, private
+Expires: 0
+
+RESPONSE BODY
+=============
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><IntuitResponse xmlns="http://schema.intuit.com/finance/v3" time="2016-08-24T15:11:09.170-07:00"><Customer domain="QBO" sparse="false"><Id>141</Id><SyncToken>1</SyncToken><MetaData><CreateTime>2016-08-24T15:11:08-07:00</CreateTime><LastUpdatedTime>2016-08-24T15:11:09-07:00</LastUpdatedTime></MetaData><Title>Title1213104419</Title><GivenName>GivenName1455324844</GivenName><MiddleName>Middle368236934</MiddleName><FamilyName>Family511296509</FamilyName><Suffix>Sr.</Suffix><FullyQualifiedName>DisplayName1196027329 (deleted)</FullyQualifiedName><CompanyName>CompanyName1180650019</CompanyName><DisplayName>DisplayName1196027329 (deleted)</DisplayName><PrintOnCheckName>CompanyName1180650019</PrintOnCheckName><Active>false</Active><PrimaryPhone><FreeFormNumber>(650)111-1111</FreeFormNumber></PrimaryPhone><AlternatePhone><FreeFormNumber>(650)111-2222</FreeFormNumber></AlternatePhone><Mobile><FreeFormNumber>(650)111-3333</FreeFormNumber></Mobile><Fax><FreeFormNumber>(650)111-1111</FreeFormNumber></Fax><PrimaryEmailAddr><Address>test@abc.com</Address></PrimaryEmailAddr><DefaultTaxCodeRef>2</DefaultTaxCodeRef><Taxable>true</Taxable><BillAddr><Id>253</Id><Line1>123 Main St</Line1><City>Mountain View</City><Country>United States</Country><CountrySubDivisionCode>CA</CountrySubDivisionCode><PostalCode>94043</PostalCode></BillAddr><ShipAddr><Id>254</Id><Line1>123 Main St</Line1><City>Mountain View</City><Country>United States</Country><CountrySubDivisionCode>CA</CountrySubDivisionCode><PostalCode>94043</PostalCode></ShipAddr><Notes>Testing Notes</Notes><Job>false</Job><BillWithParent>false</BillWithParent><Balance>0</Balance><BalanceWithJobs>0</BalanceWithJobs><CurrencyRef name="United States Dollar">USD</CurrencyRef><PreferredDeliveryMethod>Print</PreferredDeliveryMethod><ResaleNum>40</ResaleNum></Customer></IntuitResponse>
+
