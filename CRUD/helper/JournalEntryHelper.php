@@ -4,6 +4,7 @@ require_once('AccountHelper.php');
 require_once('Address.php'); 
 require_once('TaxCodeHelper.php'); 
 require_once('ItemHelper.php'); 
+require_once('VendorHelper.php'); 
 
 class JournalEntryHelper {
     static function getJournalEntryFields(DataService $dataService) {
@@ -32,6 +33,13 @@ class JournalEntryHelper {
 		$journalEntryLineDetail2->PostingType = $postingTypeEnum::IPPPOSTINGTYPEENUM_CREDIT;
 		$creditAccount = AccountHelper::getCreditCardBankAccount($dataService);
         $journalEntryLineDetail2->AccountRef = $creditAccount->Id;
+
+        $eRef = new IPPEntityTypeRef();
+        $entityTypeEnum = new IPPEntityTypeEnum();
+        $eRef->Type  = $entityTypeEnum::IPPENTITYTYPEENUM_VENDOR;
+        $vendor = VendorHelper::getVendor($dataService);
+        $eRef->EntityRef = $vendor->Id;
+        $journalEntryLineDetail2->Entity = $eRef;
 		
 		$line2->JournalEntryLineDetail = $journalEntryLineDetail2;
 		$line2->Description = "Description " . rand();
