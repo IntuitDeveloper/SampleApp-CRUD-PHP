@@ -2,14 +2,14 @@
 SampleApp-CRUD-PHP
 
 <p>Welcome to the Intuit Developer's PHP Sample App for CRUD operations.</p>
-<p>This sample app is meant to provide working examples of how to integrate your app with the Intuit Small Business ecosystem. Specifically, this sample application demonstrates the following:</p>
+<p>This sample app is meant to provide working examples of how to integrate your app with the Intuit Small Business ecosystem. Specifically, this sample app demonstrates the following:</p>
 
 <ul>
 	<li>Create, Read, Query, Update, Delete, Void entities.</li>
 	<li>All operations are performed using QuickBooks PHP SDK.</li>
 </ul>
 
-<p>Please note that while these examples work, features not called out above are not intended to be taken and used in production business applications. In other words, this is not a seed project to be taken cart blanche and deployed to your production environment.</p>  
+<p>Note that while these examples work, features not called out above are not intended to be taken and used in production business applications. In other words, this is not a seed project to be taken cart blanche and deployed to your production environment.</p>  
 
 <p>For example, certain concerns are not addressed at all in our samples (e.g., security, privacy, scalability). In our sample apps, we strive to strike a balance between clarity, maintainability, and performance where we can. However, clarity is ultimately the most important quality in a sample app.</p>
 
@@ -34,12 +34,12 @@ In order to successfully run this sample app you need a few things:
 
 ## First Use Instructions
 
-1. Clone the GitHub repo to your computer
+1. Clone the GitHub repo to your computer.
 2. Fill in the [`App.config`](CRUD/App.config) file values with the OAuth tokens generated while connecting with the company.
 
 ## Running the code
 
-This app is directed to provide individual sample code for CRUD operations for various QBO entities.
+This app provides individual sample code for CRUD operations for various QBO entities.
 Each PHP file can be run individually.
 
 Steps described below is to run the PHP file for creating a customer.
@@ -51,11 +51,11 @@ Steps described below is to run the PHP file for creating a customer.
 
 Follow similar steps for other classes.
 
-Note: The sample code has been implemented for a US locale company. Certain fields may not be applicable for other locales or minor versions. Care should be taken to handle such scenarios separately.
+Note: The sample code has been implemented for a company with a US locale. Certain fields may not be applicable for other locales or minor versions. Care should be taken to handle such scenarios separately.
 
 ## Project Structure
 
-* PHP code for CRUD operations are located under [`CRUD/Entities`](CRUD/Entities) directory
-* PHP code for Helper Classes are located under [`helper`](CRUD/helper) directory
-* Request/response XMLs are located under [`Logs`](CRUD/Logs) directory
+* PHP code for CRUD operations is located under [`CRUD/Entities`](CRUD/Entities) directory.
+* PHP code for Helper Classes is located under [`helper`](CRUD/helper) directory.
+* Request/response XMLs are located under [`Logs`](CRUD/Logs) directory.
 
