@@ -5,8 +5,8 @@ SampleApp-CRUD-PHP
 <p>This sample app provides working examples of how to integrate your app with the Intuit Small Business ecosystem. Specifically, this sample app demonstrates how to:</p>
 
 <ul>
-	<li>Use the Create, Read, Query, Update, Delete, and Void entities.</li>
-	<li>Perform operations using the QuickBooks PHP SDK.</li>
+	<li>Use the Create, Read, Query, Update, Delete, and Void entities</li>
+	<li>Perform operations using the QuickBooks PHP SDK</li>
 </ul>
 
 <p>Note that while these examples work, features not called out above are not intended to be taken and used in production business applications. In other words, this is not a seed project to be taken cart blanche and deployed to your production environment.</p>  
