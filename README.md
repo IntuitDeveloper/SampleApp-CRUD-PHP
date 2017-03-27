@@ -27,8 +27,8 @@ SampleApp-CRUD-PHP
 
 In order to successfully run this sample app you need a few things:
 
-1. Install PHP SDK. Refer instructions [here](https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting/0209_php/0002_install_the_php_sdk).
-2. A [developer.intuit.com](http://developer.intuit.com) account
+1. Install the PHP SDK. Refer to the instructions [here](https://developer.intuit.com/docs/0100_quickbooks_online/0400_tools/0005_accounting/0209_php/0002_install_the_php_sdk).
+2. A [developer.intuit.com](http://developer.intuit.com) account.
 3. An app on [developer.intuit.com](http://developer.intuit.com) and the associated app token, consumer key, and consumer secret.
 4. One sandbox company, connect the company with your app and generate the OAuth tokens.
 
