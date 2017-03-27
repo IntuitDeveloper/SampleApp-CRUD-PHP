@@ -55,7 +55,7 @@ Note: The sample code has been implemented for a US locale company. Certain fiel
 
 ## Project Structure
 
-* PHP code for CRUD operations are located under [`CRUD`](CRUD) directory
+* PHP code for CRUD operations are located under [`CRUD/Entities`](CRUD/Entities) directory
 * PHP code for Helper Classes are located under [`helper`](CRUD/helper) directory
 * Request/response XMLs are located under [`Logs`](CRUD/Logs) directory
 
