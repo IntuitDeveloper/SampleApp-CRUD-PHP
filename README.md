@@ -44,9 +44,9 @@ Each PHP file can be run individually.
 
 Steps described below is to run the PHP file for creating a customer.
 
-1. Open the terminal window or command prompt and cd into the CRUD directory `/SampleApp-CRUD-PHP/CRUD/Customer`
+1. Open the terminal window or command prompt and cd into the CRUD directory `/SampleApp-CRUD-PHP/CRUD/Customer`.
 2. Run the command `php CustomerCreate.php`.
-3. On the console you'll see the log being generated with the new customer id.
+3. On the console you'll see the log being generated with the new customer ID.
 4. Request/Response XMLs are generated in the [`Logs`](CRUD/Logs) folder.
 
 Follow similar steps for other classes.
