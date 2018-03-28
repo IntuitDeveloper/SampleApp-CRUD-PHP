@@ -1,0 +1,25 @@
+{
+    "name": "quickbooks/v3-php-sdk",
+    "description": "The Official PHP SDK for QuickBooks Online Accounting API",
+    "type": "library",
+    "keywords": ["api", "http", "rest", "quickbooks", "smallbusiness"],
+    "homepage": "http://developer.intuit.com",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuickBooksOnline\\API\\": "src/"
+        }
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "hlu2",
+            "email": "Hao_Lu@intuit.com"
+        }
+    ]
+}
