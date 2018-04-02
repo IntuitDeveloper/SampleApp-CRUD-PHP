@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -20,34 +20,9 @@ $dataService = DataService::Configure(array(
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
 //Add a new Invoice
-$theResourceObj = Invoice::create([
-    "Line" => [
-    [
-         "Amount" => 100.00,
-         "DetailType" => "SalesItemLineDetail",
-         "SalesItemLineDetail" => [
-           "ItemRef" => [
-             "value" => 1,
-             "name" => "Services"
-           ]
-         ]
-    ]
-    ],
-    "CustomerRef"=> [
-          "value"=> 1
-    ],
-    "BillEmail" => [
-          "Address" => "Familiystore@intuit.com"
-    ],
-    "BillEmailCc" => [
-          "Address" => "a@intuit.com"
-    ],
-    "BillEmailBcc" => [
-          "Address" => "v@intuit.com"
-    ]
-]);
 
-$resultingObj = $dataService->Add($theResourceObj);
+$invoice = $dataService->FindbyId('invoice', 196);
+$resultingObj = $dataService->Delete($invoice);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";

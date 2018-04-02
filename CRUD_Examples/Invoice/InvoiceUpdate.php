@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -22,6 +22,23 @@ $dataService->throwExceptionOnError(true);
 //Add a new Invoice
 
 $invoice = $dataService->FindbyId('invoice', 196);
+
+$theResourceObj = Invoice::update($invoice, [
+    "CustomerRef"=> [
+          "value"=> 2
+    ],
+    "BillEmail" => [
+          "Address" => "Changed@intuit.com"
+    ],
+    "BillEmailCc" => [
+          "Address" => "abc@intuit.com"
+    ],
+    "BillEmailBcc" => [
+          "Address" => "vxyz@intuit.com"
+    ]
+]);
+
+$resultingObj = $dataService->Update($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
@@ -29,7 +46,7 @@ if ($error) {
     echo "The Response message is: " . $error->getResponseBody() . "\n";
 }
 else {
-    echo "Created Id={$invoice->Id}. Reconstructed response body:\n\n";
-    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($invoice, $urlResource);
+    echo "Created Id={$resultingObj->Id}. Reconstructed response body:\n\n";
+    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($resultingObj, $urlResource);
     echo $xmlBody . "\n";
 }
