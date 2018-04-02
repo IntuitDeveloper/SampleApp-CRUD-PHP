@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -19,30 +19,7 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
-//Add a new Vendor
-$theResourceObj = Bill::create([
-    "Line" =>
-    [
-        [
-            "Id" => "1",
-            "Amount" => 200.00,
-            "DetailType" => "AccountBasedExpenseLineDetail",
-            "AccountBasedExpenseLineDetail" =>
-            [
-                "AccountRef" =>
-                [
-                    "value" => "7"
-                ]
-            ]
-        ]
-    ],
-    "VendorRef" =>
-    [
-        "value" =>"56"
-    ]
-]);
-
-$resultingObj = $dataService->Add($theResourceObj);
+$bill = $dataService->FindbyId('bill', 207);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
@@ -50,7 +27,7 @@ if ($error) {
     echo "The Response message is: " . $error->getResponseBody() . "\n";
 }
 else {
-    echo "Created Id={$resultingObj->Id}. Reconstructed response body:\n\n";
-    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($resultingObj, $urlResource);
+    echo "Created Id={$bill->Id}. Reconstructed response body:\n\n";
+    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($bill, $urlResource);
     echo $xmlBody . "\n";
 }

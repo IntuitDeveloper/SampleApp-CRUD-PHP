@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -24,7 +24,7 @@ $theResourceObj = Bill::update($bill , [
     "DocNumber" => "56789"
 ]);
 
-$resultingObj = $dataService->Add($theResourceObj);
+$resultingObj = $dataService->Update($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
