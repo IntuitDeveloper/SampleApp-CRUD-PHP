@@ -35,7 +35,7 @@ In order to successfully run this sample app you need a few things:
 ## First Use Instructions
 
 1. Clone the GitHub repo to your computer.
-2. Fill in the [`App.config`](CRUD/App.config) file values with the OAuth tokens generated while connecting with the company.
+2. Update your OAuth 2 tokens
 
 ## Running the code
 
@@ -47,15 +47,9 @@ Steps described below is to run the PHP file for creating a customer.
 1. Open the terminal window or command prompt and cd into the CRUD directory `/SampleApp-CRUD-PHP/CRUD/Customer`.
 2. Run the command `php CustomerCreate.php`.
 3. On the console you'll see the log being generated with the new customer ID.
-4. Request/Response XMLs are generated in the [`Logs`](CRUD/Logs) folder.
+4. Request/Response XMLs are generated in the folder you specified.
 
 Follow similar steps for other classes.
 
 Note: The sample code has been implemented for a company with a US locale. Certain fields may not be applicable for other locales or minor versions. Care should be taken to handle such scenarios separately.
-
-## Project Structure
-
-* PHP code for CRUD operations is located under [`CRUD/Entities`](CRUD/Entities) directory.
-* PHP code for Helper Classes is located under [`helper`](CRUD/helper) directory.
-* Request/response XMLs are located under [`Logs`](CRUD/Logs) directory.
 
