@@ -1,6 +1,5 @@
 <?php
-require "../vendor/autoload.php";
-
+require "../../vendor/autoload.php";
 
 use QuickBooksOnline\API\DataService\DataService;
 use QuickBooksOnline\API\Core\Http\Serialization\XmlObjectSerializer;
@@ -24,7 +23,7 @@ $theResourceObj = Account::update($account , [
      "Active" => false
 ]);
 
-$resultingObj = $dataService->Add($theResourceObj);
+$resultingObj = $dataService->Update($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";

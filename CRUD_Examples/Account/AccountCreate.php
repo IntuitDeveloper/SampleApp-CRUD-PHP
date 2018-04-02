@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -12,7 +12,7 @@ $dataService = DataService::Configure(array(
     'ClientID' => "Q0fXL014zAv3wzmlhwXMEHTrKepfAshCRjztEu58ZokzCD5T7D",
     'ClientSecret' => "stfnZfuSZUDay6cJSWtvQ9HkWiKFbcI9YuBTET5P",
     'accessTokenKey' =>
-    'eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..37nFpM9YGugRpmZrNQLEYA.3Y6BM-X1k_0EUbBUFAWwXq9y46ZONCZ40sCUHTMmYc93Qf5c2ytcP8Q3ZFrSe9yBK6xGZ4J9VeMyh2QqgWFLrNyz3mqd9fShfgXZRS_kxCMEDZ-m94YS89F8xOP4smIVztlv7bucqj8osDKC52YJC1gi_P7SJoW3uSXOwwhHUARcWnyHsR7Upz4DJ8-yO0n7JWipiHBKdDagMygBIb6GtJ1244jgwE9vND4HiALkCBYrhsh4qWrXyBWKXB_4UWsM-QAIl-YCNszWp6VxFNn4Cyh-kOUNxgHpe9pa5Rt6DbcF6WD_T0MYR8S5srEIs7BisEwY7xstXJbIY_U8qIOZh9LwsQAsaXulJuWl7I4xWQ0yK5H6EEsksa3ZoaS_xeZE1KrHvMbKjHu3diDGAQFgJ9_uRjJWDElh7JT1t56HHCqkpYeNXY6oAXipqTf2Y1DZDlho6lRLBT6ss38XKEJ8aFpI5V3JbyziiVaFbhqPOIi-MD69JK7ItFhsnt2QZkdYZIqBhq1LeeCtmD6lXJSQtyqk3eghBX1uWbeCx4ue4UbyvkhD1QNY4yFqhCIXwPkcCkiDdry8YbchYnmrJ9eh7DU85H5r0YZOewAWYpQ9y_u6QHRdNNr0Otd6mXL7zpDZliQB65czbR479QmYjHqSBmpMwUn3LrvELxrQz2Wyib8fwyA_xQYTJr3w0pUiCtT_.fhIAms_p2AstZBBW6KIkhQ',
+    'eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiZGlyIn0..Qr15AgeNJsyIUPdHsqb4CQ.W80WV4CJJCDLj3musjhI0VWO0Yp8K3ONsAfxEKzP3TIjxqDNAeTuwzafabk6p2pbHBLyC7QhStdUfDnGEj1demES4E7cDmfdszE39Ll7WhIFB5VGCIhisKUx1W_v8lwI5_QSWH6iOACYfF5urDfylcr-WLD69PpQtbJNvem1Wj3WlK_Gk3a89sIoBrpLBUVGVoNY4k7MQkWqsohMCk7E4yvQHZtmnaLpvr0tgn5xxWd9N85IR0I_rjuKMCzcDDMRvk4jALQy3ED6BYRMPn-uepCeqPKx9Ucd97quyP05tVu5_7Hd_mRMKFSpQ-PPOpXyuPI7gu-U9WxbKUOZSnNtl9DMexNds6LETyGq2CZoN_X17-it9vVodG-0_lpYIraizHbBzjDo8YuP1nfZ03OWsIlLnOCy112ptg_0C17pL1qNoHEn4a7UcQ5GTsnuJD2LtXF_0TZ-1YjzP5CUHdeNIdD_kjtWR86xy7QF7jnqyPD1UXqOXgiNcgBF9U24cwg2YWS0nDJN6SfB0dbv_PIdxiCGgfoDOTTC5THDR90o1zHxLlUtg1sNJ8aalJnZEQGwY3V0ybQtFvtYnvOKe7iJSin6HE7QV_xaZYCUe23Z-SZgmdSjKEVhGuiwbTbBFw9cF-MvAMr_1g3WSvnyIRa4o7po6CosuJhVI18-OYqUdn8KuzuT20OoYoLNE_LqdkAo.DWCzntijHiYR9r-qrr3wjA',
     'refreshTokenKey' => "L011530994357pUIdF4rZSpMC5XCZ2TV4ypu4pOpfen4VRvYzl",
     'QBORealmID' => "193514611894164",
     'baseUrl' => "Development"
@@ -22,7 +22,7 @@ $dataService->throwExceptionOnError(true);
 //Add a new Vendor
 $theResourceObj = Account::create([
   "AccountType" => "Accounts Receivable",
-  "Name" => "Second Account"
+  "Name" => "Second Account test"
 ]);
 
 $resultingObj = $dataService->Add($theResourceObj);
