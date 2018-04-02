@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -19,21 +19,14 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
-$theResourceObj = TimeActivity::create([
-    "NameOf" => "Employee",
-    "EmployeeRef" => [
-        "value" => "55",
-        "name" => "Emily Platt"
-    ],
-    "StartTime" => "2015-07-05T08:00:00-08:00",
-    "EndTime" => "2018-07-05T17:00:00-08:00",
-    "BillableStatus" => "NotBillable",
-    "Taxable" => false,
-    "HourlyRate" => 15,
-    "Description"=> "Garden Lighting"
+
+$timeActivity = $dataService->FindbyId('timeactivity', 8);
+
+$theResourceObj = TimeActivity::update($timeActivity, [
+     "Description" => "Updated descirption"
 ]);
 
-$resultingObj = $dataService->Add($theResourceObj);
+$resultingObj = $dataService->Update($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";

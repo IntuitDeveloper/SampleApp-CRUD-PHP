@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -19,8 +19,21 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
+$theResourceObj = TimeActivity::create([
+    "NameOf" => "Employee",
+    "EmployeeRef" => [
+        "value" => "55",
+        "name" => "Emily Platt"
+    ],
+    "StartTime" => "2015-07-05T08:00:00-08:00",
+    "EndTime" => "2018-07-05T17:00:00-08:00",
+    "BillableStatus" => "NotBillable",
+    "Taxable" => false,
+    "HourlyRate" => 15,
+    "Description"=> "Garden Lighting"
+]);
 
-$timeActivity = $dataService->FindbyId('timeactivity', 8);
+$resultingObj = $dataService->Add($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
@@ -28,7 +41,7 @@ if ($error) {
     echo "The Response message is: " . $error->getResponseBody() . "\n";
 }
 else {
-    echo "Created Id={$timeActivity->Id}. Reconstructed response body:\n\n";
-    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($timeActivity, $urlResource);
+    echo "Created Id={$resultingObj->Id}. Reconstructed response body:\n\n";
+    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($resultingObj, $urlResource);
     echo $xmlBody . "\n";
 }
