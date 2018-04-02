@@ -1,5 +1,5 @@
 <?php
-require "../vendor/autoload.php";
+require "../../vendor/autoload.php";
 
 
 use QuickBooksOnline\API\DataService\DataService;
@@ -21,11 +21,6 @@ $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
 
 $item = $dataService->FindbyId('item', 24);
-$theResourceObj = Item::update($item , [
-    "Active" => false
-]);
-
-$resultingObj = $dataService->Add($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
@@ -33,7 +28,7 @@ if ($error) {
     echo "The Response message is: " . $error->getResponseBody() . "\n";
 }
 else {
-    echo "Created Id={$resultingObj->Id}. Reconstructed response body:\n\n";
-    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($resultingObj, $urlResource);
+    echo "Created Id={$item->Id}. Reconstructed response body:\n\n";
+    $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($item, $urlResource);
     echo $xmlBody . "\n";
 }
