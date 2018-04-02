@@ -19,7 +19,6 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
-//Add a new Invoice
 
 $item = $dataService->FindbyId('item', 24);
 $error = $dataService->getLastError();
