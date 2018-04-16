@@ -23,9 +23,6 @@ $dataService = DataService::Configure(array(
     'baseUrl' => "Development"
 ));
 
-$dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
-$serviceContext = $dataService->getServiceContext();
-
 // Prep Data Services
 $reportService = new ReportService($serviceContext);
 if (!$reportService) {
