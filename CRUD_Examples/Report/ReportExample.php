@@ -1,6 +1,5 @@
 <?php
-//Replace the line with require "vendor/autoload.php" if you are using the Samples from outside of _Samples folder
-include('../config.php');
+require "../vendor/autoload.php";
 
 use QuickBooksOnline\API\Core\ServiceContext;
 use QuickBooksOnline\API\DataService\DataService;
