@@ -22,7 +22,7 @@ $dataService = DataService::Configure(array(
     'QBORealmID' => "193514611894164",
     'baseUrl' => "Development"
 ));
-
+$serviceContext = $dataService->getServiceContext();
 // Prep Data Services
 $reportService = new ReportService($serviceContext);
 if (!$reportService) {
