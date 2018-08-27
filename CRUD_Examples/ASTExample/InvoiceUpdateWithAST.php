@@ -23,14 +23,10 @@ $invoice = $dataService->FindbyId('invoice', 9);
 $isASTEnabled = $dataService->getCompanyPreferences()->TaxPrefs->PartnerTaxEnabled;
 if(!$isASTEnabled) throw new Exception("AST is not enabled");
 //Also, make sure the Sales Deposit is turned on in the settings page, and the AST is enabled.
-//we are going to override the tax. Again, the TxnTaxDetail.TxnTaxCodeRef is just a placeholder. It is required. You can use the same value as it is, or some random value.
+//we are going to override the tax. Again, the TxnTaxDetail.TxnTaxCodeRef is just a placeholder. It is required. You can use the same value as it is, or some random value, or remove it.
 //The only value that matters is the TotalTax here
 $theResourceObj = Invoice::update($invoice, [
     "TxnTaxDetail" => [
-       "TxnTaxCodeRef" => [
-          //Original value is 3, but 999999 will work
-          "value" => "3"
-       ],
        //It is the totalTax that matters
        "TotalTax" => 210
    ]
