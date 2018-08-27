@@ -17,6 +17,9 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
+
+$isASTEnabled = $dataService->getCompanyPreferences()->TaxPrefs->PartnerTaxEnabled;
+if(!$isASTEnabled) throw new Exception("AST is not enabled");
 //Add a new Invoice
 //In order for AST to work, the TxnTaxDetail.TxnTaxCodeRef has to be provided. However, the value does not matter once AST is enabled.
 $theResourceObj = Invoice::create([
