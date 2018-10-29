@@ -17,7 +17,7 @@ $dataService = DataService::Configure(array(
     'QBORealmID' => "193514611894164",
     'baseUrl' => "Development"
 ));
-$dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
+$dataService->setLogLocation('/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
 
 $timeActivity = $dataService->FindbyId('timeactivity', 8);
@@ -32,3 +32,4 @@ else {
     $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($timeActivity, $urlResource);
     echo $xmlBody . "\n";
 }
+?>
