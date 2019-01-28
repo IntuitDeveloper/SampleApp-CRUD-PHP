@@ -17,7 +17,7 @@ $dataService = DataService::Configure(array(
     'QBORealmID' => "193514611894164",
     'baseUrl' => "Development"
 ));
-$dataService->setLogLocation('/Users/hlu2/Desktop/newFolderForLog");
+$dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
 
 $timeActivity = $dataService->FindbyId('timeactivity', 8);
@@ -32,4 +32,5 @@ else {
     $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($timeActivity, $urlResource);
     echo $xmlBody . "\n";
 }
-?>
+
+// Notice we do not use a closing tag for a php-only file. It is poor practice to do so. Find out more here https://stackoverflow.com/questions/4410704/why-would-one-omit-the-close-tag
