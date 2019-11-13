@@ -19,7 +19,7 @@ $dataService = DataService::Configure(array(
 ));
 $dataService->setLogLocation("/Users/hlu2/Desktop/newFolderForLog");
 $dataService->throwExceptionOnError(true);
-//Add a new Vendor
+// Add a new Bill
 $theResourceObj = Bill::create([
     "Line" =>
     [
