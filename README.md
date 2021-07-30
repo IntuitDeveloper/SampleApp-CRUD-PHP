@@ -1,4 +1,4 @@
-[![Sample Banner](views/Sample.png)][ss1]
+[![Rate your Sample](views/Ratesample.png)][ss1][![Yes](views/Thumbup.png)][ss2][![No](views/Thumbdown.png)][ss3]
 
 # SampleApp-CRUD-PHP
 
@@ -60,4 +60,6 @@ Follow similar steps for other classes.
 
 Note: The sample code has been implemented for a company with a US locale. Certain fields may not be applicable for other locales or minor versions. Care should be taken to handle such scenarios separately.
 
-[ss1]: https://help.developer.intuit.com/s/samplefeedback?cid=9010&repoName=SampleApp-CRUD-PHP
+[ss1]: #
+[ss2]: https://customersurveys.intuit.com/jfe/form/SV_9LWgJBcyy3NAwHc?check=Yes&checkpoint=SampleApp-CRUD-PHP&pageUrl=github
+[ss3]: https://customersurveys.intuit.com/jfe/form/SV_9LWgJBcyy3NAwHc?check=No&checkpoint=SampleApp-CRUD-PHP&pageUrl=github
