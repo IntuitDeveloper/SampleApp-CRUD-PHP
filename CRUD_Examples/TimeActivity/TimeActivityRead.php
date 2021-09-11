@@ -32,3 +32,5 @@ else {
     $xmlBody = XmlObjectSerializer::getPostXmlFromArbitraryEntity($timeActivity, $urlResource);
     echo $xmlBody . "\n";
 }
+
+// Notice we do not use a closing tag for a php-only file. It is poor practice to do so. Find out more here https://stackoverflow.com/questions/4410704/why-would-one-omit-the-close-tag
