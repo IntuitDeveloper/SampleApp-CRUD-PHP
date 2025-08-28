@@ -1,2 +1,6 @@
 /vendor/
 composer.phar
+/nbproject
+.DS_Store
+.idea
+
