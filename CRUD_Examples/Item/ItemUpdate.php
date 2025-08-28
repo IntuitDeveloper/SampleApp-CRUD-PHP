@@ -25,7 +25,7 @@ $theResourceObj = Item::update($item , [
     "QtyOnHand" => 100
 ]);
 
-$resultingObj = $dataService->Add($theResourceObj);
+$resultingObj = $dataService->Update($theResourceObj);
 $error = $dataService->getLastError();
 if ($error) {
     echo "The Status code is: " . $error->getHttpStatusCode() . "\n";
